@@ -1,0 +1,13 @@
+{
+    "service_name": "hj-service",
+    "service_description": "hj-service module",
+    "restart_on_failure": true,
+    "restart_delay": 5,
+    "max_restart_attempts": 3,
+    "log_path": ".\\logs",
+    "database_path": ".\\db.sqlite",
+    "monitoring_path": [
+        "C:\\"
+    ],
+    "custom_data_path": ".\\data"
+}

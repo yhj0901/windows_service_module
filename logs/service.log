@@ -1,0 +1,189 @@
+2025/03/20 18:16:04 파일 로거가 초기화되었습니다. 경로: C:\workspace\windows_service_module\logs\service.log
+2025/03/20 18:16:04 runService 함수 시작: hj-service
+2025/03/20 18:16:04 [INFO] runService 함수 시작: hj-service
+2025/03/20 18:16:04 서비스 'hj-service'를 시작합니다.
+2025/03/20 18:16:04 [INFO] 서비스 'hj-service'를 시작합니다.
+2025/03/20 18:16:04 [INFO] 인자: hj-service
+2025/03/20 18:16:04 파일 로거가 초기화되었습니다. 경로: C:\workspace\windows_service_module\logs\service.log
+2025/03/20 18:16:04 [INFO] IO 모니터링이 초기화되었습니다.
+2025/03/20 18:16:04 [INFO] 데이터베이스 경로 설정: C:\workspace\windows_service_module\db.sqlite
+2025/03/20 18:16:04 [INFO] 모니터링이 성공적으로 시작되었습니다
+2025/03/20 18:16:04 [INFO] 서비스 'hj-service'가 시작되었습니다.
+2025/03/20 18:16:14 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:16:24 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:16:34 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:16:44 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:16:54 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:17:04 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:17:14 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:17:16 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\Temp\jna-82418\jna2856420092874643317.dll
+2025/03/20 18:17:24 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:17:25 [INFO] 파일 이벤트 발생: .exe - C:\$RECYCLE.BIN\S-1-5-21-1131487761-2558684844-935045372-1002\$IPF5O2B.exe
+2025/03/20 18:17:25 [INFO] 파일 이벤트 발생: .exe - C:\Users\dhjan\Downloads\ZoomInstaller (3).exe
+2025/03/20 18:17:25 [INFO] 파일 이벤트 발생: .exe - C:\$RECYCLE.BIN\S-1-5-21-1131487761-2558684844-935045372-1002\$RPF5O2B.exe
+2025/03/20 18:17:34 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:17:44 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:17:45 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\plugins\com.sun.jna_5.15.0.v20240915-2000\com\sun\jna\win32-aarch64\jnidispatch.dll
+2025/03/20 18:17:45 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\plugins\com.sun.jna_5.15.0.v20240915-2000\com\sun\jna\win32-x86\jnidispatch.dll
+2025/03/20 18:17:45 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\plugins\com.sun.jna_5.15.0.v20240915-2000\com\sun\jna\win32-x86-64\jnidispatch.dll
+2025/03/20 18:17:45 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\plugins\org.eclipse.equinox.launcher.win32.win32.x86_64_1.2.1100.v20240722-2106\eclipse_11904.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-core-console-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-core-console-l1-2-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-core-datetime-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-core-debug-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-core-errorhandling-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-core-fibers-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-core-fibers-l1-1-1.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-core-file-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-core-file-l1-2-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-core-file-l2-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-core-handle-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-core-heap-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-core-interlocked-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-core-kernel32-legacy-l1-1-1.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-core-libraryloader-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-core-localization-l1-2-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-core-memory-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-core-namedpipe-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-core-processenvironment-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-core-processthreads-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-core-processthreads-l1-1-1.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-core-profile-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-core-rtlsupport-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-core-string-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-core-synch-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-core-synch-l1-2-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-core-sysinfo-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-core-sysinfo-l1-2-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-core-timezone-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-core-util-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-crt-conio-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-crt-convert-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-crt-environment-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-crt-filesystem-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-crt-heap-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-crt-locale-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-crt-math-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-crt-multibyte-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-crt-private-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-crt-process-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-crt-runtime-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-crt-stdio-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-crt-string-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-crt-time-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\api-ms-win-crt-utility-l1-1-0.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\attach.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\awt.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\extnet.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\fontmanager.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\freetype.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\j2gss.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\j2pkcs11.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\jaas.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .exe - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\jabswitch.exe
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .exe - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\jaccessinspector.exe
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .exe - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\jaccesswalker.exe
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\java.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .exe - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\java.exe
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\javaaccessbridge.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\javajpeg.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .exe - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\javaw.exe
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\jawt.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .exe - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\jcmd.exe
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\jimage.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .exe - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\jinfo.exe
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\jli.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .exe - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\jmap.exe
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .exe - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\jps.exe
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .exe - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\jrunscript.exe
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\jsound.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .exe - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\jstack.exe
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .exe - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\jstat.exe
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .exe - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\jwebserver.exe
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .exe - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\keytool.exe
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .exe - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\kinit.exe
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .exe - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\klist.exe
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .exe - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\ktab.exe
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\lcms.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\management.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\management_ext.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\mlib_image.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\msvcp140.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\net.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\nio.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\prefs.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\rmi.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .exe - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\rmiregistry.exe
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\server\jvm.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\splashscreen.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\sspi_bridge.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\sunmscapi.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\syslookup.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\ucrtbase.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\vcruntime140.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\vcruntime140_1.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\verify.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\w2k_lsa_auth.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\windowsaccessbridge-64.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jre\bin\zip.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jkiss_wmi.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\swt-awt-win32-4967r8.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\swt-gdip-win32-4967r8.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\swt-wgl-win32-4967r8.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\swt-win32-4967r8.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\WebView2Loader.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\WebView2Loader.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\jkiss_wmi.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\swt-awt-win32-4967r8.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\swt-gdip-win32-4967r8.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\swt-wgl-win32-4967r8.dll
+2025/03/20 18:17:46 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\DBeaver\swt-win32-4967r8.dll
+2025/03/20 18:17:49 [INFO] 파일 이벤트 발생: .exe - C:\Users\dhjan\Downloads\msys2-x86_64-20250221 - 복사본.exe
+2025/03/20 18:17:53 [INFO] 파일 이벤트 발생: .exe - C:\Users\dhjan\Downloads\ZoomInstaller (2) - 복사본.exe
+2025/03/20 18:17:54 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:18:04 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:18:14 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:18:24 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:18:34 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:18:44 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:18:54 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:18:56 [INFO] 파일 이벤트 발생: .exe - C:\Users\dhjan\Downloads\baretail.exe
+2025/03/20 18:19:04 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:19:14 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:19:24 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:19:31 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\Temp\jna-82418\jna2856420092874643317.dll
+2025/03/20 18:19:31 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\Temp\jna-82418\jna16965783743746212917.dll
+2025/03/20 18:19:34 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:19:44 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:19:54 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:20:04 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:20:14 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:20:24 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:20:34 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:20:44 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:20:54 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:21:01 [INFO] 파일 이벤트 발생: .dll - C:\Users\dhjan\AppData\Local\Temp\sqlite-3.49.1.0-8fa63485-92a6-4d5c-8928-2c6215bc3778-sqlitejdbc.dll
+2025/03/20 18:21:04 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:21:14 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:21:24 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:21:34 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:21:44 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:21:54 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:22:04 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:22:14 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:22:24 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:22:34 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:22:44 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:22:54 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:23:04 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:23:14 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:23:24 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:23:34 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:23:44 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:23:54 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:24:04 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:24:14 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:24:24 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:24:34 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:24:44 [INFO] 서비스 'hj-service'가 실행 중입니다.
+2025/03/20 18:24:54 [INFO] 서비스 'hj-service'가 실행 중입니다.

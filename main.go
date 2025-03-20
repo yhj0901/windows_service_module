@@ -17,29 +17,59 @@ import (
 	"golang.org/x/sys/windows/svc/mgr"
 )
 
-var elog debug.Log
-var config *ServiceConfig
-var monitorInstance *monitor.Monitor
+var (
+	elog            debug.Log
+	config          *ServiceConfig
+	monitorInstance *monitor.Monitor
+	fileLogger      *log.Logger
+	logFile         *os.File // 추가: 로그 파일 핸들러
+	isDebug         bool
+)
 
 const configFileName = "service_config.json"
+
+// 로그 상수 정의
+const (
+	LogInfo    = "INFO"
+	LogError   = "ERROR"
+	LogWarning = "WARNING"
+)
 
 type myService struct{}
 
 // 서비스 실행 로직
 func (m *myService) Execute(args []string, r <-chan svc.ChangeRequest, changes chan<- svc.Status) (ssec bool, errno uint32) {
-	// args에는 ["is", "auto-started"]가 들어옴
+	defer func() {
+		if logFile != nil {
+			logFile.Close()
+		}
+	}()
+
 	for _, arg := range args {
-		elog.Info(1, fmt.Sprintf("인자: %s", arg))
+		logMessage(LogInfo, "인자: %s", arg)
 	}
 
 	const cmdsAccepted = svc.AcceptStop | svc.AcceptShutdown
 	changes <- svc.Status{State: svc.StartPending}
 
+	// 디렉토리 초기화 추가
+	if err := initializeDirectories(); err != nil {
+		logMessage(LogError, "디렉토리 초기화 실패: %v", err)
+		return
+	}
+
+	// 파일 로거 초기화 추가
+	if err := initializeFileLogger(); err != nil {
+		logMessage(LogError, "로그 초기화 실패: %v", err)
+		return
+	}
+
 	// IO 모니터링 초기화
-	monitorInstance = monitor.NewMonitor(10 * time.Second) // 모니터링 주기 설정
-	elog.Info(1, "IO 모니터링이 초기화되었습니다.")
+	monitorInstance = monitor.NewMonitor(10 * time.Second)
+	logMessage(LogInfo, "IO 모니터링이 초기화되었습니다.")
 
 	// 기본 데이터베이스 경로 설정
+	logMessage(LogInfo, "데이터베이스 경로 설정: %s", config.DatabasePath)
 	monitorInstance.SetDatabasePath(config.DatabasePath)
 
 	// 모니터링 경로 설정
@@ -51,13 +81,15 @@ func (m *myService) Execute(args []string, r <-chan svc.ChangeRequest, changes c
 	monitorInstance.SetFileFilters([]string{".exe", ".dll"})
 
 	// 모니터링 시작
-	monitorInstance.Start()
-
-	elog.Info(1, "IO 모니터링이 시작되었습니다.")
+	if err := monitorInstance.Start(); err != nil {
+		logMessage(LogError, "모니터링 시작 실패: %v", err)
+		return
+	}
+	logMessage(LogInfo, "모니터링이 성공적으로 시작되었습니다")
 
 	// 서비스가 시작되면 Running 상태로 변경
 	changes <- svc.Status{State: svc.Running, Accepts: cmdsAccepted}
-	elog.Info(1, fmt.Sprintf("서비스 '%s'가 시작되었습니다.", config.ServiceName))
+	logMessage(LogInfo, "서비스 '%s'가 시작되었습니다.", config.ServiceName)
 
 	// 여기에 서비스의 메인 로직 구현
 	ticker := time.NewTicker(10 * time.Second)
@@ -68,20 +100,20 @@ loop:
 		select {
 		case <-ticker.C:
 			// 주기적으로 수행할 작업
-			elog.Info(1, fmt.Sprintf("서비스 '%s'가 실행 중입니다.", config.ServiceName))
+			logMessage(LogInfo, "서비스 '%s'가 실행 중입니다.", config.ServiceName)
 
 		case event := <-monitorInstance.EventChan():
-			// 파일 이벤트 처리 - 이벤트 로그에만 기록
-			elog.Info(1, fmt.Sprintf("파일 이벤트 발생: %s - %s", event.FileType, event.Path))
+			// 파일 이벤트 처리 - 이벤트 로그와 파일 로그에 기록
+			logMessage(LogInfo, "파일 이벤트 발생: %s - %s", event.FileType, event.Path)
 		case c := <-r:
 			switch c.Cmd {
 			case svc.Interrogate:
 				changes <- c.CurrentStatus
 			case svc.Stop, svc.Shutdown:
-				elog.Info(1, fmt.Sprintf("서비스 '%s'가 중지 요청을 받았습니다.", config.ServiceName))
+				logMessage(LogInfo, "서비스 '%s'가 중지 요청을 받았습니다.", config.ServiceName)
 				break loop
 			default:
-				elog.Error(1, fmt.Sprintf("예상치 못한 제어 요청 #%d", c))
+				logMessage(LogError, "예상치 못한 제어 요청 #%d", c)
 			}
 		}
 	}
@@ -91,39 +123,62 @@ loop:
 	// 정리 작업 수행
 	if monitorInstance != nil {
 		monitorInstance.Stop()
-		elog.Info(1, "IO 모니터링이 중지되었습니다.")
+		logMessage(LogInfo, "IO 모니터링이 중지되었습니다.")
 	}
 
 	// 서비스 종료
 	changes <- svc.Status{State: svc.Stopped}
-	elog.Info(1, fmt.Sprintf("서비스 '%s'가 종료되었습니다.", config.ServiceName))
+	logMessage(LogInfo, "서비스 '%s'가 종료되었습니다.", config.ServiceName)
 	return
 }
 
-func runService(name string, isDebug bool) {
+func runService(name string, debugMode bool) {
+	isDebug = debugMode
 	var err error
+
+	// 디렉토리 초기화
+	if err := initializeDirectories(); err != nil {
+		log.Fatalf("디렉토리 초기화 실패: %v", err)
+		return
+	}
+
+	// 파일 로거 초기화
+	if err := initializeFileLogger(); err != nil {
+		log.Fatalf("로그 초기화 실패: %v", err)
+		return
+	}
+
+	// 로그 테스트
+	fileLogger.Printf("runService 함수 시작: %s", name)
+	logMessage(LogInfo, "runService 함수 시작: %s", name) // logMessage 사용
+
 	if isDebug {
 		elog = debug.New(name)
 	} else {
 		elog, err = eventlog.Open(name)
 		if err != nil {
+			fileLogger.Printf("이벤트 로그를 열 수 없습니다: %v", err)
 			log.Fatalf("이벤트 로그를 열 수 없습니다: %v", err)
 			return
 		}
 	}
 	defer elog.Close()
 
-	elog.Info(1, fmt.Sprintf("서비스 '%s'를 시작합니다.", name))
+	fileLogger.Printf("서비스 '%s'를 시작합니다.", name)
+	logMessage(LogInfo, "서비스 '%s'를 시작합니다.", name)
+
 	run := svc.Run
 	if isDebug {
 		run = debug.Run
 	}
 	err = run(name, &myService{})
 	if err != nil {
-		elog.Error(1, fmt.Sprintf("서비스 실행 실패: %v", err))
+		fileLogger.Printf("서비스 실행 실패: %v", err)
+		logMessage(LogError, "서비스 실행 실패: %v", err)
 		return
 	}
-	elog.Info(1, fmt.Sprintf("서비스 '%s'가 종료되었습니다.", name))
+	fileLogger.Printf("서비스 '%s'가 종료되었습니다.", name)
+	logMessage(LogInfo, "서비스 '%s'가 종료되었습니다.", name)
 }
 
 // 서비스 설치
@@ -340,7 +395,121 @@ func usage(errmsg string) {
 	os.Exit(1)
 }
 
+func initializeDirectories() error {
+	// 절대 경로로 변환
+	execDir, err := filepath.Abs(filepath.Dir(os.Args[0]))
+	if err != nil {
+		return fmt.Errorf("실행 파일 경로를 가져올 수 없습니다: %v", err)
+	}
+
+	// 설정의 상대 경로가 이미 절대 경로인지 확인
+	var logPath, dbPath, dataPath string
+
+	if filepath.IsAbs(config.LogPath) {
+		logPath = config.LogPath
+	} else {
+		logPath = filepath.Join(execDir, config.LogPath)
+	}
+
+	if filepath.IsAbs(config.DatabasePath) {
+		dbPath = config.DatabasePath
+	} else {
+		dbPath = filepath.Join(execDir, config.DatabasePath)
+	}
+
+	if filepath.IsAbs(config.CustomDataPath) {
+		dataPath = config.CustomDataPath
+	} else {
+		dataPath = filepath.Join(execDir, config.CustomDataPath)
+	}
+
+	// 설정 업데이트
+	config.LogPath = filepath.Clean(logPath)
+	config.DatabasePath = filepath.Clean(dbPath)
+	config.CustomDataPath = filepath.Clean(dataPath)
+
+	// 디버그 로그
+	log.Printf("로그 경로: %s", config.LogPath)
+	log.Printf("DB 경로: %s", config.DatabasePath)
+	log.Printf("데이터 경로: %s", config.CustomDataPath)
+
+	dirs := []string{
+		config.LogPath,
+		filepath.Dir(config.DatabasePath),
+		config.CustomDataPath,
+	}
+
+	for _, dir := range dirs {
+		if err := os.MkdirAll(dir, 0755); err != nil {
+			return fmt.Errorf("디렉토리 생성 실패 %s: %v", dir, err)
+		}
+		log.Printf("디렉토리 생성됨: %s", dir)
+	}
+
+	return nil
+}
+
+func initializeFileLogger() error {
+	// 이미 열려있는 파일이 있다면 닫기
+	if logFile != nil {
+		logFile.Close()
+	}
+
+	// 로그 디렉토리 생성
+	if err := os.MkdirAll(config.LogPath, 0755); err != nil {
+		return fmt.Errorf("로그 디렉토리 생성 실패: %v", err)
+	}
+
+	var err error
+	logPath := filepath.Join(config.LogPath, "service.log")
+	logFile, err = os.OpenFile(logPath,
+		os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
+	if err != nil {
+		return fmt.Errorf("로그 파일 열기 실패: %v", err)
+	}
+
+	// 파일에만 로그 출력 (콘솔 출력 제거)
+	fileLogger = log.New(logFile, "", log.LstdFlags)
+
+	// 초기화 확인 로그
+	fileLogger.Printf("파일 로거가 초기화되었습니다. 경로: %s", logPath)
+	return nil
+}
+
+// 통합 로그 함수
+func logMessage(level string, format string, args ...interface{}) {
+	message := fmt.Sprintf(format, args...)
+
+	// 파일 로그
+	if fileLogger != nil {
+		fileLogger.Printf("[%s] %s", level, message)
+	}
+
+	// 이벤트 로그
+	if elog != nil {
+		switch level {
+		case LogError:
+			elog.Error(1, message)
+		case LogWarning:
+			elog.Warning(1, message)
+		default:
+			elog.Info(1, message)
+		}
+	}
+
+	// 콘솔 출력 (디버그 모드일 때만)
+	if isDebug {
+		log.Printf("[%s] %s", level, message)
+	}
+}
+
 func main() {
+	defer func() {
+		if logFile != nil {
+			logFile.Close()
+		}
+	}()
+
 	// 설정 로드
 	// 실행파일이 있는 경로만 추출하기
 	execDir, err := filepath.Abs(filepath.Dir(os.Args[0]))

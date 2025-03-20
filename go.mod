@@ -3,7 +3,7 @@ module windows_service_module
 go 1.24.0
 
 require (
-	github.com/yhj0901/windowsIOMonitoring v0.1.3
+	github.com/yhj0901/windowsIOMonitoring v0.1.4
 	golang.org/x/sys v0.31.0
 )
 
